@@ -36,21 +36,32 @@
                     <?php
 
                         $con = mysqli_connect('localhost', 'root', '', 'cingciong');
-                        
+
                         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                            
+
                             @$username = $_POST['username'];
                             @$password = $_POST['password'];
 
-                            $stmt = mysqli_prepare($con, "SELECT * FROM user_data WHERE login = ?");
-                            mysqli_stmt_bind_param($stmt, "s", $username);
-                            mysqli_stmt_execute($stmt);
-                            $result = mysqli_stmt_get_result($stmt);
-                        
-                            
-                            
-                        }
-                        mysqli_close($con);
+                            if (!empty($username) && !empty($password)) {
+                                $sql1 = mysqli_query($con,"SELECT * from user_data where 'login'='$username'");
+                                while($row = mysqli_fetch_row($sql1)){
+                                    if($row[2]==""){
+                                        if($row[3]==$password){
+                                            echo "No logon";
+                                            header('Location: tyktolk.php');
+                                        }
+                                        else{
+                                            echo "Błędne hasło";
+                                        }
+                                    }   else{
+                                        echo "Błędny login";
+                                    }
+                                }
+                            }
+                            // $stmt = mysqli_prepare($con, "SELECT * FROM user_data WHERE login = ?");
+                            // mysqli_stmt_bind_param($stmt, "s", $username);
+                            // mysqli_stmt_execute($stmt);
+                            // $result = mysqli_stmt_get_result($stmt);
 
                     ?>
 
