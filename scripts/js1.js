@@ -20,15 +20,3 @@ pokahaslo.forEach(okoico => {
 
     });
 })
-
-
-function checkform(){
-    let pas1 = document.querySelector('form[name="paswd1"]').value;
-    let pas2 = document.querySelector('form[name="paswd2"]').value;
-
-    if(pas1 === pas2){
-        alert("Hasła są takie same!");
-    }   else{
-        alert("Hasła nie są takie same");
-    }
-}

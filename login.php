@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(isset($_SESSION['user'])){
+    header("Location: tyktolk.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="pl-PL">
 <head>
@@ -13,15 +19,41 @@
         <div class="form login">
             <div class="form-content">
                 <header>Logowanie</header>
+                <?php
+                if(isset($_POST["submt"])){
+                    $login = $_POST["username"];
+                    $pass = $_POST["password"];
+                    require_once "database.php";
+                    $sql = "SELECT * FROM user_data WHERE login = '$login'";
+                    $result = mysqli_query($con, $sql);
+                    $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
+                    if($user){
+                        if(password_verify($pass, $user["password"])){
+                            session_start();
+                            $_SESSION["user"] = "Yes";
+                            header("Location: tyktolk.php");
+                            die();
+                        }else{
+                            echo("
+                            <div class='alert alert-danger'>Nieprawidłowe hasło</div>
+                        ");
+                        }
+                    }else{
+                        echo("
+                            <div class='alert alert-danger'>Nazwa użytkownika nie istnieje</div>
+                        ");
+                    }
+                }
+                ?>
 
                 <form action="login.php" method="post">
                     
                     <div class="field input-field">
-                        <input type="text" placeholder="Nazwa użytkownika" class="input">
+                        <input type="text" placeholder="Nazwa użytkownika" class="input" name="username">
                     </div>
 
                     <div class="field input-field">
-                        <input type="password" placeholder="Hasło" class="haslo">
+                        <input type="password" placeholder="Hasło" class="haslo" name="password">
                         <i class='bx bx-hide pasico'></i>
                     </div>
 
@@ -30,29 +62,8 @@
                     </div>
 
                     <div class="field button-field">
-                        <button>Zaloguj</button>
+                        <input name="submt" type="submit" value="ZALOGUJ" id="sbt">
                     </div>
-                    
-                    <?php
-
-                        $con = mysqli_connect('localhost', 'root', '', 'cingciong');
-                        
-                        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                            
-                            @$username = $_POST['username'];
-                            @$password = $_POST['password'];
-
-                            $stmt = mysqli_prepare($con, "SELECT * FROM user_data WHERE login = ?");
-                            mysqli_stmt_bind_param($stmt, "s", $username);
-                            mysqli_stmt_execute($stmt);
-                            $result = mysqli_stmt_get_result($stmt);
-                        
-                            
-                            
-                        }
-                        mysqli_close($con);
-
-                    ?>
 
                 </form>
 
@@ -76,13 +87,7 @@
                 <span>Zaloguj sie za pomocą Google</span>
                 </a>
             </div>
-        </div>
-
-        
-        <!-- ---------------------------- Rejestracja ---------------------------- -->
-        
-        
-        
+        </div>   
     </section>
 
     <script src="scripts/js1.js" ></script>
