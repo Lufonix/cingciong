@@ -52,10 +52,10 @@ if(isset($_SESSION['user'])){
                         array_push($errors, "Ten e-mail jest już zajęty");
                     }
 
-                    $sql1 = "SELECT * FROM user_data  WHERE login='$login'";
-                    $result1 = mysqli_query($con,$sql1);
-                    $numrows1 = mysqli_num_rows($result);
-                    if( $numrows1 > 0 ) {
+                    $sql = "SELECT * FROM user_data  WHERE login='$login'";
+                    $result = mysqli_query($con,$sql);
+                    $numrows = mysqli_num_rows($result);
+                    if( $numrows > 0 ) {
                         array_push($errors, "Ten login jest już zajęty");
                     }
 
