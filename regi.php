@@ -13,6 +13,7 @@ if(isset($_SESSION['user'])){
     <title>Rejestracja</title>
     <link rel="stylesheet" href="styl1.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
 </head>
 <body>
 <section class="container forms">
