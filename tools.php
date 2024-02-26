@@ -32,7 +32,7 @@ if(!isset($_SESSION['user'])){
 </aside>
 <main id="man">
     Usuń użytkownika<br>
-    <form action="deluser.php" method="post">
+    <form action="" method="post">
     <select name="deluser">
     <?php 
         $connect = mysqli_connect('localhost', 'root', '', 'cingciong');
@@ -51,3 +51,10 @@ if(!isset($_SESSION['user'])){
     <script src="scripts/js2.js"></script>
 </body>
 </html>
+<?php
+    $user=$_POST['deluser'];
+    $connect=mysqli_connect( "localhost", "root","", "cingciong");
+    $sql= "DELETE FROM user_data where login= '$user'";
+    mysqli_query($connect, $sql);
+    mysqli_close($connect);
+?>
