@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(isset($_SESSION['user'])){
-    header("Location: tyktolk.php");
+    header("Location: cingciong.php");
 }
 ?>
 <!DOCTYPE html>
@@ -45,14 +45,14 @@ if(isset($_SESSION['user'])){
                     }
                     
                     require_once "database.php";
-                    $sql = "SELECT * FROM user_data  WHERE email='$mail'";
+                    $sql = "SELECT * FROM user  WHERE email='$mail'";
                     $result = mysqli_query($con,$sql);
                     $numrows = mysqli_num_rows($result);
                     if( $numrows > 0 ) {
                         array_push($errors, "Ten e-mail jest już zajęty");
                     }
 
-                    $sql = "SELECT * FROM user_data  WHERE login='$login'";
+                    $sql = "SELECT * FROM user  WHERE login='$login'";
                     $result = mysqli_query($con,$sql);
                     $numrows = mysqli_num_rows($result);
                     if( $numrows > 0 ) {
@@ -66,7 +66,7 @@ if(isset($_SESSION['user'])){
                             ");
                         }
                     }else{
-                        $sql = "INSERT INTO user_data (login, email, password, pastome) VALUES ( ?, ?, ?, ? )";
+                        $sql = "INSERT INTO user (login, email, password, pastome) VALUES ( ?, ?, ?, ? )";
                         $stmt = mysqli_stmt_init($con);
                         $prepare = mysqli_stmt_prepare($stmt,$sql);
                         if($prepare){

@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(isset($_SESSION['user'])){
-    header("Location: tyktolk.php");
+    header("Location: cingciong.php");
 }
 ?>
 <!DOCTYPE html>
@@ -25,14 +25,14 @@ if(isset($_SESSION['user'])){
                     $login = $_POST["username"];
                     $pass = $_POST["password"];
                     require_once "database.php";
-                    $sql = "SELECT * FROM user_data WHERE login = '$login'";
+                    $sql = "SELECT * FROM user WHERE login = '$login'";
                     $result = mysqli_query($con, $sql);
                     $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
                     if($user){
                         if(password_verify($pass, $user["password"])){
                             session_start();
                             $_SESSION["user"] = "Yes";
-                            header("Location: tyktolk.php");
+                            header("Location: cingciong.php");
                             die();
                         }else{
                             echo("
