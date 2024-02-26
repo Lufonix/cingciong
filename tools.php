@@ -35,7 +35,7 @@ if(!isset($_SESSION['user'])){
     <input type="select" name="deluser" id="deluser">
     <?php 
         $connect = mysqli_connect('localhost', 'root', '', 'cingciong');
-        $sql =  "SELECT login FROM users";
+        $sql =  "SELECT login FROM user_data";
         $result = mysqli_query($connect, $sql);
         while($x = mysqli_fetch_row($result)){
             echo "<option value='".$x[0]."'>". $x[0]."</option>";
