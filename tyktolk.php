@@ -24,11 +24,11 @@ if(!isset($_SESSION['user'])){
 </header>
     
 <aside>
-    <button onclick="wys(1);">Cokolwiek</button>
-    <button onclick="wys(2);">coś innego</button>
-    <button onclick="wys(3);">penis</button>
-    <button onclick="wys(4);">ciekawe co w nim napiszesz</button>
-    <button onclick="wys(5);">asdfghjklz</button>
+    <button onclick="wys(1);">Użytkownicy</button>
+    <button onclick="wys(2);">Posty</button>
+    <button onclick="wys(3);">Narzędzia administracyjne</button>
+    <button onclick="wys(4);">[...]</button>
+    <button onclick="wys(5);">[...]</button>
 </aside>
 <main id="man">
     cipa
