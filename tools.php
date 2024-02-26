@@ -32,8 +32,7 @@ if(!isset($_SESSION['user'])){
 </aside>
 <main id="man">
     Usuń użytkownika
-    <form>
-    <input type="select" name="deluser" id="deluser">
+    <select>
     <?php 
         $connect = mysqli_connect('localhost', 'root', '', 'cingciong');
         $sql =  "SELECT login FROM user_data";
@@ -43,7 +42,7 @@ if(!isset($_SESSION['user'])){
         }
         mysqli_close($connect);
     ?>
-    </form>
+    </select>
 </main>
     <footer></footer>
     <script src="scripts/js2.js"></script>
