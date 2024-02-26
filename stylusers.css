@@ -39,6 +39,7 @@ main{
     float: left;
     background-color: #ddd;
     height: 89vh;
+    text-align: center;
 }
 aside button{
     width: 100%;
@@ -56,5 +57,9 @@ aside button{
     border: 1px white;
 }
 table{
-    border: 2px solid black;
+    padding: 5px;
+}
+td{
+    background-color: lightgray;
+    border-collapse: collapse;
 }
