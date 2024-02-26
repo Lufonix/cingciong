@@ -18,7 +18,7 @@ if(!isset($_SESSION['user'])){
 
     <div id="conter">
         <div id="lewy">
-            <img src="images/ad.png" alt="Reklama">
+            <img src="images/ad1.png" alt="Reklama">
         </div>
 
         <div id="tyktyk">
@@ -27,6 +27,7 @@ if(!isset($_SESSION['user'])){
         </div>
 
         <div id="prawy">
+            <a href="tools.php"><button>Panel</button></a>
             <img src="images/avatar-def.png" alt="Avatar">
             User data<br>
             title<br>

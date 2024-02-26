@@ -17,7 +17,7 @@ if(!isset($_SESSION['user'])){
 <body>
 <header>
     <div id="topbar">
-            <div id="logo" onclick="wys(6);"><img src="images/logo-alt.png" alt="logo-cingciong"></div>
+            <a id="logo"href="cingciong.php"><img src="images/logo-alt.png" alt="logo-cingciong"></a>
             <h1>Panel zarządzania</h1>
             <a id="logout" href="logout.php">Wyloguj</a>
     </div>
