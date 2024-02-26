@@ -66,7 +66,7 @@ if(isset($_SESSION['user'])){
                             ");
                         }
                     }else{
-                        $sql = "INSERT INTO user_data (login, email, passwd, pastome) VALUES ( ?, ?, ?, ? )";
+                        $sql = "INSERT INTO user_data (login, email, password, pastome) VALUES ( ?, ?, ?, ? )";
                         $stmt = mysqli_stmt_init($con);
                         $prepare = mysqli_stmt_prepare($stmt,$sql);
                         if($prepare){
