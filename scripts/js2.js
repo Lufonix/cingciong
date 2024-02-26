@@ -8,10 +8,10 @@ function wys(x){
             window.location.href = "users.php";
             break;
         case 2:
-            window.location.href = "https://www.example2.com";
+            window.location.href = "tools.php";
             break;
         case 3:
-            window.location.href = "https://www.example3.com";
+            window.location.href = "tools.php";
             break;
         case 4:
             window.location.href = "https://www.example4.com";
