@@ -31,7 +31,17 @@ if(!isset($_SESSION['user'])){
     <button onclick="wys(5);">[...]</button>
 </aside>
 <main id="man">
-    cipa pieprzyć
+    <table>
+    <?php
+        $connect  = mysqli_connect('localhost', 'root', '', 'cingciong');
+        $sql = "SELECT *  FROM user_data";
+        $result = mysqli_query($connect, $sql);
+        while($x=mysqli_fetch_row($result)){
+            echo "<tr><td>".$x[1]."</td><td>".$x[2]."</td></tr>";
+        }
+        mysqli_close($connect);
+    ?>
+    </table>
 </main>
     <footer></footer>
     <script src="scripts/js2.js"></script>
