@@ -35,7 +35,7 @@ if(!isset($_SESSION['user'])){
         <tr><th>Nazwa użytkownika</th><th>E-mail</th></tr>
     <?php
         $connect  = mysqli_connect('localhost', 'root', '', 'cingciong');
-        $sql = "SELECT *  FROM user_data";
+        $sql = "SELECT *  FROM user";
         $result = mysqli_query($connect, $sql);
         while($x=mysqli_fetch_row($result)){
             echo "<tr><td>".$x[1]."</td><td>".$x[2]."</td></tr>";

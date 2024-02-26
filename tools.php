@@ -36,7 +36,7 @@ if(!isset($_SESSION['user'])){
     <select name="deluser">
     <?php 
         $connect = mysqli_connect('localhost', 'root', '', 'cingciong');
-        $sql =  "SELECT login FROM user_data";
+        $sql =  "SELECT login FROM user";
         $result = mysqli_query($connect, $sql);
         while($x = mysqli_fetch_row($result)){
             echo "<option value='".$x[0]."'>". $x[0]."</option>";
@@ -54,7 +54,7 @@ if(!isset($_SESSION['user'])){
 <?php
     $user=$_POST['deluser'];
     $connect=mysqli_connect( "localhost", "root","", "cingciong");
-    $sql= "DELETE FROM user_data where login= '$user'";
+    $sql= "DELETE FROM user where login= '$user'";
     mysqli_query($connect, $sql);
     mysqli_close($connect);
 ?>
