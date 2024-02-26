@@ -31,7 +31,7 @@ if(!isset($_SESSION['user'])){
     <button onclick="wys(5);">[...]</button>
 </aside>
 <main id="man">
-    Usuń użytkownika
+    Usuń użytkownika<br>
     <select>
     <?php 
         $connect = mysqli_connect('localhost', 'root', '', 'cingciong');
