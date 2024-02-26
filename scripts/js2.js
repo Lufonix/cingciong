@@ -5,23 +5,22 @@ const main = document.querySelector("#man");
 function wys(x){
     switch(x){
         case 1:
-            main.innerHTML = "Jeden";
+            window.location.href = "users.php";
             break;
         case 2:
-            main.innerHTML = "Dwa";
+            window.location.href = "https://www.example2.com";
             break;
         case 3:
-            main.innerHTML = "Trzy";
+            window.location.href = "https://www.example3.com";
             break;
         case 4:
-            main.innerHTML = "Cztery";
+            window.location.href = "https://www.example4.com";
             break;
         case 5:
-            main.innerHTML = "Pięć";
+            window.location.href = "https://www.example5.com";
             break;
         case 6:
-            main.innerHTML = "Cipa";
+            window.location.href = "https://www.example6.com";
             break;
     }
-    
 }
