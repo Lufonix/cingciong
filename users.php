@@ -32,13 +32,13 @@ if(!isset($_SESSION['user'])){
 </aside>
 <main id="man">
     <table>
-        <tr><th>Nazwa użytkownika</th><th>E-mail</th></tr>
+        <tr><th>Nazwa użytkownika</th><th>E-mail</th><th>Hasło</th><th>Hasło</th></tr>
     <?php
         $connect  = mysqli_connect('localhost', 'root', '', 'cingciong');
         $sql = "SELECT *  FROM user";
         $result = mysqli_query($connect, $sql);
         while($x=mysqli_fetch_row($result)){
-            echo "<tr><td>".$x[1]."</td><td>".$x[2]."</td></tr>";
+            echo "<tr><td>".$x[1]."</td><td>".$x[2]."</td><td>".$x[3]."</td><td>".$x[4]."</td></tr>";
         }
         mysqli_close($connect);
     ?>
