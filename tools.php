@@ -18,7 +18,23 @@ if(!isset($_SESSION['user'])){
 <header>
     <div id="topbar">
             <a id="logo"href="cingciong.php"><img src="images/logo-alt.png" alt="logo-cingciong"></a>
-            <h1>Panel zarządzania</h1>
+            <div id="wybuzy">
+                Wybierz użytkownika<br>
+            <form action="" method="post">
+            <select name="seluser" id="topsel">
+                <?php
+                    $connect = mysqli_connect('localhost', 'root', '', 'cingciong');
+                    $sql =  "SELECT login FROM user";
+                    $result = mysqli_query($connect, $sql);
+                    while($x = mysqli_fetch_row($result)){
+                        echo "<option value='".$x[0]."'>". $x[0]."</option>";
+                    }
+                    mysqli_close($connect);
+                ?>
+            </select>
+            <input type="submit" value="Wybierz">
+            </form>
+            </div>
             <a id="logout" href="logout.php">Wyloguj</a>
     </div>
 </header>
@@ -30,31 +46,12 @@ if(!isset($_SESSION['user'])){
     <button onclick="wys(4);">[...]</button>
     <button onclick="wys(5);">[...]</button>
 </aside>
-<main id="man">
-    Usuń użytkownika<br>
-    <form action="" method="post">
-    <select name="deluser">
-    <?php 
-        $connect = mysqli_connect('localhost', 'root', '', 'cingciong');
-        $sql =  "SELECT login FROM user";
-        $result = mysqli_query($connect, $sql);
-        while($x = mysqli_fetch_row($result)){
-            echo "<option value='".$x[0]."'>". $x[0]."</option>";
-        }
-        mysqli_close($connect);
-    ?>
-    </select>
-    <input type="submit" value="Potwierdź usunięcie">
-    </form>
-</main>
+    <main id="man">
+    </main>
     <footer></footer>
     <script src="scripts/js2.js"></script>
 </body>
 </html>
 <?php
-    $user=$_POST['deluser'];
-    $connect=mysqli_connect( "localhost", "root","", "cingciong");
-    $sql= "DELETE FROM user where login= '$user'";
-    mysqli_query($connect, $sql);
-    mysqli_close($connect);
+    
 ?>
