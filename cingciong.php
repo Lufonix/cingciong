@@ -20,7 +20,22 @@ if(!isset($_SESSION['user'])){
     <div id="conter">
         
         <div id="lewy">
-            <img src="images/ad1.png" alt="Reklama">
+
+            <table>
+            <tr>
+                <td><img src="images/ad1.png" alt="ad1"></td>
+                <td><img src="images/ad2.png" alt="ad2"></td>
+            </tr>
+            <tr>
+                <td><img src="images/ad3.png" alt="ad3"></td>
+                <td><img src="images/ad4.png" alt="ad4"></td>
+            </tr>
+            <tr>
+                <td><img src="images/ad5.png" alt="ad5"></td>
+                <td><img src="images/ad6.png" alt="ad6"></td>
+            </tr>
+            </table>
+
         </div>
 
         <div id="tyktyk">
@@ -36,7 +51,7 @@ if(!isset($_SESSION['user'])){
                 </div>
             
                 <div class="user_name">
-                    <h3>Andrzej</h3>
+                    <h3> 	&#9830; Andrzej</h3>
                 </div>
                 
             </div>
@@ -45,18 +60,27 @@ if(!isset($_SESSION['user'])){
                 <p>10000000 KOLOROWYCH PIŁEK W WANNIE MOJEJ ZMARŁEJ BABCI BOŻENKI</p>
             </div>
             
-            <div class="video_description">#pilka#wanna#babcia#rak#bozena#mamzamiarpopelnicsamobojstwo#dividnull</div>
+            <div class="video_description">
+                #pilka#wanna#babcia#rak#bozena#mamzamiarpopelnicsamobojstwo
+            </div>
             
             
             
             <div class="comments">
 
-                <div class="comments_title"><hr/>Komentarze<hr/></div>
+                <div class="comments_title">Komentarze</div>
 
                     <div class="comment">
                         <div class="comment_name">PolJulecqua2011</div>
                         <div class="comment_value">
                             Te kolorowe piłki som super i wgl super filmik! Moja babcia terz zmarzła na raka płuc ale miała na imnie Tadeusz.   
+                        </div>
+                    </div>
+
+                    <div class="comment">
+                        <div class="comment_name">Adamoooo1278</div>
+                        <div class="comment_value">
+                            Mam nadzieje ze Julcia bendzie wrzucana do tego basenu w nastepnym CingCiongu. Mam nadzieie ze bendzie w samych majtach. ps muj pies ma na imie gustaw   
                         </div>
                     </div>
 

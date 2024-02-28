@@ -10,14 +10,14 @@ if(!isset($_SESSION['user'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylusers.css">
+    <link rel="stylesheet" href="styltools.css">
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <title>Użytkownicy</title>
 </head>
 <body>
 <header>
     <div id="topbar">
-            <div id="logo" onclick="wys(6);"><img src="images/logo-alt.png" alt="logo-cingciong"></div>
+            <div id="logo"><a href="cingciong.php"><img src="images/logo-alt.png" alt="logo-cingciong"></a></div>
             <h1>Użytkownicy</h1>
             <a id="logout" href="logout.php">Wyloguj</a>
     </div>
