@@ -56,15 +56,17 @@ if(!isset($_SESSION['user'])){
                 
             </div>
 
+        <div class="video_info">
+
             <div class="video_title">
                 <p>10000000 KOLOROWYCH PIŁEK W WANNIE MOJEJ ZMARŁEJ BABCI BOŻENKI</p>
             </div>
             
             <div class="video_description">
-                #pilka#wanna#babcia#rak#bozena#mamzamiarpopelnicsamobojstwo
+                <p>#pilka#wanna#babcia#rak#bozena#mamzamiarpopelnicsamobojstwo#dajserduszko</p>
             </div>
             
-            
+        </div>
             
             <div class="comments">
 

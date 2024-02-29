@@ -1,1 +1,4 @@
-ALTER TABLE user_data AUTO_INCREMENT = 1
+ALTER TABLE user_data AUTO_INCREMENT = 1;
+
+
+SELECT user.login, video.title, video.description ,comments.content FROM video JOIN user on user.id = video.user_id JOIN comments on comments.id = comment_id;
