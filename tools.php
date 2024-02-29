@@ -15,12 +15,36 @@ if(!isset($_SESSION['user'])){
     <title>Cing Ciong</title>
 </head>
 <body>
-<header>
+
     <div id="topbar">
-            <a id="logo"href="cingciong.php"><img src="images/logo-alt.png" alt="logo-cingciong"></a>
-            <div id="wybuzy">
-                Wybierz użytkownika<br>
-            <form action="" method="post">
+        <div id="batony">
+            <button>Użytkownicy</button>
+            <button>Filmy</button>
+            <button>Komentarze</button>
+            <button>[...]</button>
+            <button>[...]</button>
+        </div>
+
+        <div id="prabatony">
+            <div></div><a id="logo"href="cingciong.php"><img src="images/logo-alt.png" alt="logo-cingciong"></a>
+            <div></div><a id="logout" href="logout.php"><button>Wyloguj</button></a>
+        </div>
+        
+    </div>
+
+    
+<main>
+    
+</main>
+
+<script src="scripts/js2.js"></script>
+</body>
+</html>
+
+<div id="wybuzy">
+    Wybierz użytkownika<br>
+        
+<form action="" method="post">
             <select name="seluser" id="topsel">
                 <?php
                     $connect = mysqli_connect('localhost', 'root', '', 'cingciong');
@@ -34,24 +58,4 @@ if(!isset($_SESSION['user'])){
             </select>
             <input type="submit" value="Wybierz">
             </form>
-            </div>
-            <a id="logout" href="logout.php">Wyloguj</a>
-    </div>
-</header>
-    
-<aside>
-    <button onclick="wys(1);">Użytkownicy</button>
-    <button onclick="wys(2);">Posty</button>
-    <button onclick="wys(3);">Narzędzia administracyjne</button>
-    <button onclick="wys(4);">[...]</button>
-    <button onclick="wys(5);">[...]</button>
-</aside>
-    <main id="man">
-    </main>
-    <footer></footer>
-    <script src="scripts/js2.js"></script>
-</body>
-</html>
-<?php
-    
-?>
+</div>
