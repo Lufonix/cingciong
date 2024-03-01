@@ -3,23 +3,57 @@ body{
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
-    
+a{
+    text-decoration: none;
+}
+#logout{
+    text-decoration: none;
+}
 img{
     width: 50px;
 }
 
-#topbar{
+
+.topbar{
     background-color: cornflowerblue;
+    min-height: 50px;
     display: flex;
-    align-items: center;
-
+    align-items: flex-start;
 }
 
-#batony > button{
-    flex-grow: 22;
-    height: 40px;
+.baty1{
+    flex: 3;
+    flex-grow: 3;
+    display: flex;
 }
 
-#prabatony > div{
+.baty2{
     flex: 1;
+    flex-shrink: 1;
+    display: flex;
+}
+
+.baty1 div{
+    max-height: 50px;
+    padding: 25px;
+    background-color: gray;
+    margin: 2px;
+
+}
+
+.baty2 div{
+    max-height: 100px;
+    padding: 25px;
+    margin: 2px;
+}
+
+.col{
+    background-color: rgb(160, 55, 55);
+}
+
+
+
+.wybuzy{
+    display: flex;
+    background-color: rgb(57, 57, 63);
 }
