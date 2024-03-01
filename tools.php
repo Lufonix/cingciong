@@ -18,9 +18,9 @@ if(!isset($_SESSION['user'])){
 
     <div class="topbar">
 
-            <div class="baton1">Użytkownicy</div>
-            <div class="baton1">Filmy</div>
-            <div class="baton1">Komentarze</div>
+            <div class="baton1"><a target="ramka" href="toolbox/users.php">Użytkownicy</a></div>
+            <div class="baton1"><a target="ramka" href="toolbox/videos.php">Filmy</a></div>
+            <div class="baton1"><a target="ramka" href="toolbox/comments.php">Komentarze</a></div>
             <div class="baton1">Wyloguj</div>
             <div class="baton1">CingCiong</div>
 
@@ -29,7 +29,7 @@ if(!isset($_SESSION['user'])){
     
     <main>
     
-    <iframe src="toolbox/users.php">
+    <iframe width="1500" height="800" src="toolbox/users.php" name="ramka">
 	    <a href="toolbox/users.php">Tekst alternatywny</a>
     </iframe>
 
