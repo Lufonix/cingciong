@@ -18,39 +18,21 @@ if(!isset($_SESSION['user'])){
 
     <div class="topbar">
 
-    
-        <div class="baty1">
             <div class="baton1">Użytkownicy</div>
             <div class="baton1">Filmy</div>
             <div class="baton1">Komentarze</div>
             <div class="baton1">Wyloguj</div>
-            <div class="baton1"></div>
-        </div>
-            
-
+            <div class="baton1">CingCiong</div>
 
     </div>
 
     
     <main>
-    <div class="wybuzy">
-        Wybierz użytkownika<br>
+    
+    <iframe src="toolbox/users.php">
+	    <a href="toolbox/users.php">Tekst alternatywny</a>
+    </iframe>
 
-    <form action="" method="post">
-                <select name="seluser" id="topsel">
-                    <?php
-                        $connect = mysqli_connect('localhost', 'root', '', 'cingciong');
-                        $sql =  "SELECT login FROM user";
-                        $result = mysqli_query($connect, $sql);
-                        while($x = mysqli_fetch_row($result)){
-                            echo "<option value='".$x[0]."'>". $x[0]."</option>";
-                        }
-                        mysqli_close($connect);
-                    ?>
-                </select>
-                <input type="submit" value="Wybierz">
-                </form>
-    </div>
     </main>
 
 <script src="scripts/js2.js"></script>
