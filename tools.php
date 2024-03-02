@@ -11,6 +11,8 @@ if(!isset($_SESSION['user'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styltools.css">
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/ajax.js"></script>
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <title>Cing Ciong</title>
 </head>
@@ -21,8 +23,8 @@ if(!isset($_SESSION['user'])){
             <div class="baton1"><a target="ramka" href="toolbox/users.php">Użytkownicy</a></div>
             <div class="baton1"><a target="ramka" href="toolbox/videos.php">Filmy</a></div>
             <div class="baton1"><a target="ramka" href="toolbox/comments.php">Komentarze</a></div>
-            <div class="baton1">Wyloguj</div>
-            <div class="baton1">CingCiong</div>
+            <div class="baton1"><a href="logout.php">Wyloguj</a></div>
+            <div class="baton1"><a href="cingciong.php">CingCiong</a></div>
 
     </div>
 

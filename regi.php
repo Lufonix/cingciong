@@ -81,7 +81,7 @@ if(isset($_SESSION['user'])){
                     }
                 }
                 ?>
-                <form action="regi.php" method="post" onsubmit="checkform();">
+                <form action="regi.php" method="post">
 
                     <div class="field input-field">
                         <input type="mail" name="mail" placeholder="E-mail" class="input">
