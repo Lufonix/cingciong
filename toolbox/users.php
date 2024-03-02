@@ -8,8 +8,8 @@
 </head>
 <body>
     
-</body>
-</html>
+
+
 
 <div class="wybuzy">
         Wybierz użytkownika
@@ -27,12 +27,22 @@
 
             ?>
         </select>
+        <input type="submit" value="Wybierz" name="wyslij">
+        </form>
+        <table>
+            
         <?php
             if(isset($_POST['wyslij'])) {
-                
+                $y = $_POST['seluser'];
+                $connect= mysqli_connect('localhost', 'root','','cingciong') ;
+                $sql = "SELECT * from user where login = $y";
+                $z = mysqli_query($connect,$sql) ;
+                while($res = mysqli_fetch_row($z)){
+                    echo "<tr><td>".$res[1]."</td> <td>".$res[2]."</td><td>".$res[3]."</td> <td>".$res[4]."</td></tr>" ;
+                }
                     
             }
         ?>
-        <input type="submit" value="Wybierz" name="wyslij">
-        </form>
 </div>
+</body>
+</html>

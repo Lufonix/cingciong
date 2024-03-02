@@ -49,6 +49,7 @@ table img{
     flex: 1;
     display: flex;
     max-width: 640px;
+    flex-basis: 640px;
     color: white;
     height: 100vh;
     width: 100%;
@@ -82,6 +83,7 @@ table img{
     background-color: #3c3d3d;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 #prawy img{
@@ -139,9 +141,7 @@ table img{
 
 
 .comments_title {
-    display: flex;
-    align-items: center;
-    text-align: center;
+    
     margin: 10px 0px;
   }
   
