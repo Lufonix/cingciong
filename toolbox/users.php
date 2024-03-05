@@ -8,9 +8,6 @@
 </head>
 <body>
     
-
-
-
 <div class="wybuzy">
         Wybierz użytkownika
 
