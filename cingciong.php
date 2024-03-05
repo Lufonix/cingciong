@@ -31,13 +31,15 @@ if(!isset($_SESSION['user'])){
         <?php
 
         require_once "database.php";
+        $vid = rand(1,100);
+        $vid2 = "videos/vid".$vid.".mp4"
         $kw = "SELECT video.url, user.login, video.title, video.description, comments.content, Users_comment.login FROM video JOIN user ON video.user_id = user.id LEFT JOIN comments ON video.id = comments.video_id LEFT JOIN user AS Users_comment ON comments.user_id = Users_comment.id;";
         $ress = mysqli_query($con, $kw);
         $res = mysqli_fetch_row($ress);
         echo ("
         <div id='tyktyk'>
             <a href='tools.php'><button>Panel</button></a><br>
-            <p>$res[0]</p>
+            <p>$vid2</p>
         </div>
 
         <div id='prawy'>
