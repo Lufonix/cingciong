@@ -21,21 +21,11 @@ if(!isset($_SESSION['user'])){
         
         <div id="lewy">
 
-            <table>
-            <tr>
-                <td><img src="images/ad1.png" alt="ad1"></td>
-                <td><img src="images/ad2.png" alt="ad2"></td>
-            </tr>
-            <tr>
-                <td><img src="images/ad3.png" alt="ad3"></td>
-                <td><img src="images/ad4.png" alt="ad4"></td>
-            </tr>
-            <tr>
-                <td><img src="images/ad5.png" alt="ad5"></td>
-                <td><img src="images/ad6.png" alt="ad6"></td>
-            </tr>
-            </table>
-
+        
+            <img src="images/strzalkagora.png" alt="gura">
+            <img src="images/strzalkadol.png" alt="dol">
+        
+            
         </div>
 
         <?php
