@@ -2,6 +2,7 @@
 session_start();
 if(!isset($_SESSION['user'])){
     header("Location: login.php");
+    include 'database.php';
 }
 ?>
 <!DOCTYPE html>
@@ -12,7 +13,7 @@ if(!isset($_SESSION['user'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styltools.css">
     <script src="scripts/jquery.js"></script>
-    <script src="scripts/ajax.js"></script>
+    
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <title>Cing Ciong</title>
 </head>
@@ -20,24 +21,25 @@ if(!isset($_SESSION['user'])){
 
     <div class="topbar">
 
-            <div class="baton1"><a target="ramka" href="toolbox/users.php">Użytkownicy</a></div>
-            <div class="baton1"><a target="ramka" href="toolbox/videos.php">Filmy</a></div>
-            <div class="baton1"><a target="ramka" href="toolbox/comments.php">Komentarze</a></div>
-            <div class="baton1"><a href="logout.php">Wyloguj</a></div>
-            <div class="baton1"><a href="cingciong.php">CingCiong</a></div>
+            <button id="uzy" class="baton1">Użytkownicy</button>
+            <button id="film" class="baton1">Filmy</button>
+            <button id="kom" class="baton1">Komentarze</button>
+            <button class="baton1"><a href="logout.php">Wyloguj</a></button>
+            <button class="baton1"><a href="cingciong.php">CingCiong</a></button>
 
     </div>
 
-    
-    <main>
-    
-    <iframe width="1500" height="800" src="toolbox/users.php" name="ramka">
-	    <a href="toolbox/users.php">Tekst alternatywny</a>
-    </iframe>
+    <div>
 
-    </main>
+    Poka huja
+    <div id="tut">
+    
 
-<script src="scripts/js2.js"></script>
+
+    </div>
+    </div>
+    <script src="scripts/ajax.js"></script>
+
 </body>
 </html>
 
