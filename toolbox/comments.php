@@ -8,7 +8,6 @@
 </head>
 <body>
 <div class="wybuzy">
-        Wybierz użytkownika
 
     <form action="" method="post">
         <select name="seluser" id="topsel">

@@ -12,7 +12,7 @@
 </html>
 
 <div class="wybuzy">
-        Wybierz użytkownika
+        
     <form action="" method="post">
         <select name="seluser" id="topsel">
             <?php

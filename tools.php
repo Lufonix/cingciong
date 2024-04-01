@@ -31,7 +31,7 @@ if(!isset($_SESSION['user'])){
 
     <div>
 
-    Poka huja
+    Wybierz użytkownika
     <div id="tut">
     
 

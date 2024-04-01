@@ -4,42 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="scripts/jquery.js"></script>
     <title>Użytkownicy</title>
 </head>
 <body>
     
 <div class="wybuzy">
-        Wybierz użytkownika
+  <form action="" method="post" onsubmit="return false;">
+    <select name="seluser" id="seluser">
+      <?php
+      $connect = mysqli_connect('localhost', 'root', '', 'cingciong');
+      $sql = "SELECT login FROM user";
+      $result = mysqli_query($connect, $sql);
+      while ($x = mysqli_fetch_row($result)) {
+        echo "<option value='" . $x[0] . "'>" . $x[0] . "</option>";
+      }
+      mysqli_close($connect);
+      ?>
+    </select>
+    <input type="button" value="Pobierz dane" id="getDataButton">
+  </form>
+</div>   
 
-    <form action="" method="post">
-        <select name="seluser" id="topsel">
-            <?php
-                $connect = mysqli_connect('localhost', 'root', '', 'cingciong');
-                $sql =  "SELECT login FROM user";
-                $result = mysqli_query($connect, $sql);
-                while($x = mysqli_fetch_row($result)){
-                    echo "<option value='".$x[0]."'>". $x[0]."</option>";
-                }
-                mysqli_close($connect);
+<div id="poka">
 
-            ?>
-        </select>
-        <input type="submit" value="Wybierz" name="wyslij">
-        </form>
-        <table>
-            
-        <?php
-            if(isset($_POST['wyslij'])) {
-                $y = $_POST['seluser'];
-                $connect= mysqli_connect('localhost', 'root','','cingciong') ;
-                $sql = "SELECT * from user where login = $y";
-                $z = mysqli_query($connect,$sql) ;
-                while($res = mysqli_fetch_row($z)){
-                    echo "<tr><td>".$res[1]."</td> <td>".$res[2]."</td><td>".$res[3]."</td> <td>".$res[4]."</td></tr>" ;
-                }
-                    
-            }
-        ?>
 </div>
+        <script>
+        $(document).ready(function() {
+          $("#getDataButton").click(function() {
+            var selectedUser = $("#seluser").val();
+        
+            // Wyślij żądanie AJAX do pliku PHP
+            $.ajax({
+              type: "POST",
+              url: "get_user_data.php",
+              data: { selectedUser: selectedUser },
+              success: function(data) {
+                // Zamień zawartość div na otrzymaną odpowiedź
+                $("#poka").html(data);
+              },
+              error: function(jqXHR, textStatus, errorThrown) {
+        console.log(textStatus, errorThrown);
+    }
+            });
+          });
+        });
+        </script>
+
 </body>
 </html>

@@ -21,7 +21,7 @@ if(!isset($_SESSION['user'])){
         
         <div id="lewy">
 
-        
+        <a href='tools.php'><button>Panel</button></a><br>
             <img src="images/strzalkagora.png" alt="gura">
             <img src="images/strzalkadol.png" alt="dol">
         
@@ -38,7 +38,7 @@ if(!isset($_SESSION['user'])){
         $res = mysqli_fetch_row($ress);
         echo ("
         <div id='tyktyk'>
-            <a href='tools.php'><button>Panel</button></a><br>
+            
             <p>$vid2</p>
         </div>
 

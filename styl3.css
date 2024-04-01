@@ -27,6 +27,16 @@ body{
     justify-content:center;
 }
 
+#lewy button{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    color: bisque;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+}
+
 
 #lewy img{
     width: 70px;
@@ -49,15 +59,6 @@ body{
     background-color: rgb(63, 94, 86);
 }
 
-#tyktyk button{
-    width: 100%;
-    height: 50px;
-    background-color: black;
-    color: bisque;
-    text-align: center;
-    cursor: pointer;
-    border: none;
-}
 
 #tyktyk button:hover{
     background-color: rgb(29, 28, 28);
