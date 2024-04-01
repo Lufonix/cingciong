@@ -1,17 +1,11 @@
-// LOAD UŻYTKOWNICY
+document.getElementById('dul').addEventListener("click",getSmth());
+    function getSmth(){
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'cingciongbet.php', true);
 
-$("tools.php").ready(function(){
-    $("#uzy").click(function(){
-        $("#tut").load("toolbox/users.php");
-    });
-    // LOAD FILMY
-    $("#film").click(function() {
-        $("#tut").load("toolbox/videos.php");
-    });
-
-    // LOAD KOMENTARZE
-    $("#kom").click(function() {
-        $("#tut").load("toolbox/comments.php");
-    });
-});
-
+    xhr.onload = function(){
+        console.log(this.responseText);
+        
+    }
+    xhr.send();
+    }
