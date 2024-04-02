@@ -31,6 +31,11 @@
             <div class='comments'>
             
                 <div class='comments_title'>Komentarze</div>
+                <div id='comments'>
+                <form id='comment_form'>
+                    <textarea id='comment_input' name='comment' placeholder='Napisz komentarz...'></textarea>
+                    <button type='submit' id='comment_submit'>Dodaj komentarz</button>
+                </form>
                 ");
             $ress = mysqli_query($con, $kw);
             while ($res1 = mysqli_fetch_assoc($ress)){
@@ -41,6 +46,6 @@
             </div>
             ");
             }
-            echo ("</div>");
+            echo ("</div></div>");
 
 ?>

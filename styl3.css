@@ -176,3 +176,26 @@ body{
 #comment_write{
     justify-content: flex-end;
 }
+
+#comments {
+    height: 100%; /* You can adjust this value to your liking */
+    overflow-y: auto;
+}
+#comment_form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+#comment_input {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#comment_submit {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
